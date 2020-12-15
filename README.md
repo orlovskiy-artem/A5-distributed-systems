@@ -1,4 +1,4 @@
-# A4-distributed-systems
+# A5-distributed-systems
 
 MOOC platform: Microservices 
 
@@ -14,4 +14,8 @@ To check if it works correctly, please execute this command in terminal to forwa
 ```bash
 kubectl port-forward mediator-79dcd7b49f-4lr7j 8080:8080 10000:10000
 ```
-Then, start the client application and it will run correctly.
+Also, port forward RabbitMQ pod to your localhost:
+```bash
+kubectl port-forward rabbitmq-5488d756f4-5ls5s 5672:5672 15672:15672 
+```
+Then, start the client application, and it will run correctly.
